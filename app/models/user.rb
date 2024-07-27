@@ -6,6 +6,7 @@ class User < ApplicationRecord
          
   has_many :post_images, dependent: :destroy
   has_many :post_comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   #profile_imageという名前でACtiveStorageでプロフィール画像を保存できる設定になった
   has_one_attached :profile_image
   
