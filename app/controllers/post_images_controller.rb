@@ -15,7 +15,7 @@ class PostImagesController < ApplicationController
 
   def index
     #インスタンス変数（すべてのデータなので複数形）　＝　PostImageのデータベースのテーブルのすべてのデータ
-    @post_images = PostImage.all
+    @post_images = PostImage.page(params[:page])
   end
 
   def show
